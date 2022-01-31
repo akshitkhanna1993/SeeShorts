@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App(){
   
+   const apikey=process.env.REACT_APP_API_KEY;
+
     return (
       <div>
         <Router>
@@ -17,6 +19,7 @@ function App(){
                 pageSize={10}
                 country="in"
                 category="general"
+                apiKey={apikey}
               />
             </Route>
             <Route exact path="/business">
@@ -25,6 +28,7 @@ function App(){
                 pageSize={10}
                 country="in"
                 category="business"
+                apiKey={apikey}
               />
             </Route>
             <Route exact path="/entertainment">
@@ -33,6 +37,7 @@ function App(){
                 pageSize={10}
                 country="in"
                 category="entertainment"
+                apiKey={apikey}
               />
             </Route>
             <Route exact path="/general">
@@ -41,6 +46,7 @@ function App(){
                 pageSize={10}
                 country="in"
                 category="general"
+                apiKey={apikey}
               />
             </Route>
             <Route exact path="/health">
@@ -52,6 +58,7 @@ function App(){
                 pageSize={10}
                 country="in"
                 category="science"
+                apiKey={apikey}
               />
             </Route>
             <Route exact path="/sports">
@@ -63,6 +70,7 @@ function App(){
                 pageSize={10}
                 country="in"
                 category="technology"
+                apiKey={apikey}
               />
             </Route>
           </Switch>
